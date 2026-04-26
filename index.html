@@ -1,310 +1,744 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Atualidades Teste Grátis - Gabarito Max</title>
-<style>
-:root{--card:#11141b;--card2:#171b24;--blue:#00f3ff;--pink:#ff00e6;--green:#39ff14;--red:#ff003c;--yellow:#ffd400;--muted:#cfcfcf;--line:rgba(255,255,255,.08);--lock:#6b7280}
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-body{background:#000;color:#fff;min-height:100vh;padding:14px 10px 40px;text-align:center;overflow-x:hidden}
-header{max-width:1100px;margin:0 auto 22px;border:2px solid var(--blue);border-radius:24px;padding:22px 14px;background:linear-gradient(180deg,#0c0f16,#090b11);box-shadow:0 0 22px rgba(0,243,255,.22)}
-header h1{color:var(--blue);font-size:clamp(1.8rem,5vw,3rem);text-shadow:0 0 14px rgba(0,243,255,.7);font-weight:900}
-header p{margin-top:10px;color:var(--pink);font-weight:800;font-size:clamp(.95rem,3vw,1.2rem)}
-#app{width:100%;max-width:1100px;margin:0 auto}
-.box{width:100%;background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--line);border-radius:20px;padding:18px 12px;box-shadow:0 0 20px rgba(0,0,0,.35);overflow:hidden}
-.btn{display:block;width:100%;max-width:620px;margin:10px auto;padding:14px 14px;border:2px solid var(--blue);background:transparent;color:#fff;border-radius:12px;cursor:pointer;font-weight:800;font-size:1rem;line-height:1.45;transition:.2s;white-space:normal;word-break:break-word}
-.btn:hover:not(:disabled){background:var(--blue);color:#000;box-shadow:0 0 18px rgba(0,243,255,.35)}
-.btn-lock{border-color:var(--lock);color:#d1d5db;background:rgba(255,255,255,.03)}
-.btn-lock:hover{background:rgba(255,255,255,.08);color:#fff;box-shadow:none}
-.btn-premium{border-color:var(--yellow);color:var(--yellow)}
-.btn-premium:hover:not(:disabled){background:var(--yellow);color:#000;box-shadow:0 0 18px rgba(255,212,0,.35)}
-.btn-voltar{border-color:#666;color:#ddd}.btn-voltar:hover:not(:disabled){background:#333;color:#fff;box-shadow:none}
-.btn-next{border-color:var(--pink);background:linear-gradient(135deg,rgba(255,0,230,.18),rgba(0,243,255,.08))}
-.btn.correct{background:var(--green)!important;border-color:var(--green)!important;color:#000!important}
-.btn.wrong{background:var(--red)!important;border-color:var(--red)!important;color:#fff!important}
-.grid-areas{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px}
-.card-area{background:linear-gradient(135deg,rgba(0,243,255,.08),rgba(255,0,230,.08));border:1px solid rgba(0,243,255,.16);border-radius:16px;padding:16px;text-align:left}
-.card-area.locked{background:linear-gradient(135deg,rgba(107,114,128,.10),rgba(55,65,81,.12));border-color:rgba(107,114,128,.25)}
-.card-area h3{color:var(--blue);margin-bottom:8px;font-size:1.08rem}
-.card-area.locked h3{color:#d1d5db}
-.card-area p{color:#ddd;font-size:.94rem;line-height:1.45;margin-bottom:10px}
-.status{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:18px;color:var(--pink);font-weight:bold;text-align:left}
-#question-text{font-size:1.03rem;line-height:1.6;margin:18px 0;text-align:left;word-break:break-word}
-.question-label{display:block;color:var(--yellow);font-weight:bold;margin-bottom:8px}
-.text-base{display:block;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px;margin:10px 0 14px;color:#f5f5f5;font-style:italic;line-height:1.65}
-.options-wrap{display:flex;flex-direction:column;gap:12px;margin-bottom:16px}
-.option-btn{width:100%;max-width:100%;margin:0;text-align:left;min-height:58px}
-.comment-box{display:none;text-align:left;margin-top:14px;padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);line-height:1.55;color:#eee}
-.result-number{font-size:3rem;color:var(--blue);margin:12px 0;font-weight:900}
-.result-sub{font-size:1.12rem;color:#ddd;margin-bottom:10px}
-.mini{color:var(--muted);font-size:.96rem;line-height:1.5}
-.lock-box{max-width:780px;margin:0 auto;background:linear-gradient(135deg,rgba(255,212,0,.10),rgba(255,0,230,.10));border:1px solid rgba(255,212,0,.25);border-radius:20px;padding:28px 18px;box-shadow:0 0 20px rgba(255,212,0,.12)}
-.lock-box h2{color:var(--yellow);font-size:2rem;margin-bottom:14px}
-.lock-box p{color:#f3f4f6;line-height:1.6;margin-bottom:12px}
-@media(max-width:700px){.grid-areas{grid-template-columns:1fr}.box{padding:15px 10px}#question-text{font-size:1rem}.btn{font-size:.95rem;padding:13px 10px}}
-</style>
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sociologia Teste Grátis - Gabarito Max</title>
+  <style>
+    :root{
+      --bg:#05070c;
+      --card:#11141b;
+      --card2:#171b24;
+      --blue:#00f3ff;
+      --pink:#ff00e6;
+      --green:#39ff14;
+      --red:#ff003c;
+      --yellow:#ffd400;
+      --text:#ffffff;
+      --muted:#cfcfcf;
+      --line:rgba(255,255,255,.08);
+      --lock:#6b7280;
+    }
 
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#000;
+      color:var(--text);
+      min-height:100vh;
+      padding:20px 12px 40px;
+      text-align:center;
+      overflow-x:hidden;
+    }
+
+    header{
+      max-width:1100px;
+      margin:0 auto 24px;
+      border:2px solid var(--blue);
+      border-radius:24px;
+      padding:22px 16px;
+      background:linear-gradient(180deg,#0c0f16,#090b11);
+      box-shadow:0 0 22px rgba(0,243,255,.22);
+    }
+
+    header h1{
+      color:var(--blue);
+      font-size:clamp(2rem,4vw,3rem);
+      text-shadow:0 0 14px rgba(0,243,255,.7);
+      font-weight:900;
+    }
+
+    header p{
+      margin-top:10px;
+      color:var(--pink);
+      font-weight:800;
+      font-size:clamp(1rem,2vw,1.3rem);
+    }
+
+    #app{
+      width:100%;
+      max-width:1100px;
+      margin:0 auto;
+    }
+
+    .box{
+      width:100%;
+      max-width:100%;
+      background:linear-gradient(180deg,var(--card),var(--card2));
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:20px 16px;
+      box-shadow:0 0 20px rgba(0,0,0,.35);
+      overflow:hidden;
+    }
+
+    .btn{
+      display:block;
+      width:100%;
+      max-width:560px;
+      margin:10px auto;
+      padding:14px 16px;
+      border:2px solid var(--blue);
+      background:transparent;
+      color:#fff;
+      border-radius:12px;
+      cursor:pointer;
+      font-weight:800;
+      font-size:1rem;
+      line-height:1.45;
+      transition:.2s;
+      white-space:normal;
+      word-break:break-word;
+      overflow-wrap:anywhere;
+    }
+
+    .btn:hover:not(:disabled){
+      background:var(--blue);
+      color:#000;
+      box-shadow:0 0 18px rgba(0,243,255,.35);
+    }
+
+    .btn-lock{
+      border-color:var(--lock);
+      color:#d1d5db;
+      background:rgba(255,255,255,.03);
+    }
+
+    .btn-lock:hover{
+      background:rgba(255,255,255,.08);
+      color:#fff;
+      box-shadow:none;
+    }
+
+    .btn-premium{
+      border-color:var(--yellow);
+      color:var(--yellow);
+    }
+
+    .btn-premium:hover:not(:disabled){
+      background:var(--yellow);
+      color:#000;
+      box-shadow:0 0 18px rgba(255,212,0,.35);
+    }
+
+    .btn-voltar{
+      border-color:#666;
+      color:#ddd;
+    }
+
+    .btn-voltar:hover:not(:disabled){
+      background:#333;
+      color:#fff;
+      box-shadow:none;
+    }
+
+    .btn.correct{
+      background:var(--green)!important;
+      border-color:var(--green)!important;
+      color:#000!important;
+    }
+
+    .btn.wrong{
+      background:var(--red)!important;
+      border-color:var(--red)!important;
+      color:#fff!important;
+    }
+
+    .grid-areas{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .card-area{
+      background:linear-gradient(135deg, rgba(0,243,255,.08), rgba(255,0,230,.08));
+      border:1px solid rgba(0,243,255,.16);
+      border-radius:16px;
+      padding:16px;
+      text-align:left;
+      min-width:0;
+    }
+
+    .card-area.locked{
+      background:linear-gradient(135deg, rgba(107,114,128,.10), rgba(55,65,81,.12));
+      border-color:rgba(107,114,128,.25);
+    }
+
+    .card-area h3{
+      color:var(--blue);
+      margin-bottom:8px;
+      font-size:1.12rem;
+      line-height:1.35;
+      word-break:break-word;
+    }
+
+    .card-area.locked h3{
+      color:#d1d5db;
+    }
+
+    .card-area p{
+      color:#ddd;
+      font-size:.95rem;
+      line-height:1.45;
+      margin-bottom:10px;
+      word-break:break-word;
+    }
+
+    .status{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-bottom:18px;
+      color:var(--pink);
+      font-weight:bold;
+      text-align:left;
+    }
+
+    #question-text{
+      font-size:1.05rem;
+      line-height:1.6;
+      margin:20px 0;
+      min-height:88px;
+      text-align:left;
+      word-break:break-word;
+      overflow-wrap:anywhere;
+    }
+
+    .question-label{
+      display:block;
+      color:var(--yellow);
+      font-weight:bold;
+      margin-bottom:8px;
+    }
+
+    .text-base{
+      display:block;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:12px;
+      padding:14px;
+      margin:10px 0 14px;
+      color:#f5f5f5;
+      font-style:italic;
+      line-height:1.65;
+    }
+
+    .options-wrap{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-bottom:16px;
+      width:100%;
+      max-width:100%;
+    }
+
+    .option-btn{
+      width:100%;
+      max-width:100%;
+      margin:0;
+      text-align:left;
+      min-height:58px;
+    }
+
+    .result-number{
+      font-size:3rem;
+      color:var(--blue);
+      margin:12px 0;
+      font-weight:900;
+    }
+
+    .result-sub{
+      font-size:1.12rem;
+      color:#ddd;
+      margin-bottom:10px;
+    }
+
+    .mini{
+      color:var(--muted);
+      font-size:.96rem;
+      line-height:1.5;
+    }
+
+    .lock-box{
+      max-width:780px;
+      margin:0 auto;
+      background:linear-gradient(135deg, rgba(255,212,0,.10), rgba(255,0,230,.10));
+      border:1px solid rgba(255,212,0,.25);
+      border-radius:20px;
+      padding:28px 18px;
+      box-shadow:0 0 20px rgba(255,212,0,.12);
+    }
+
+    .lock-box h2{
+      color:var(--yellow);
+      font-size:2rem;
+      margin-bottom:14px;
+    }
+
+    .lock-box p{
+      color:#f3f4f6;
+      line-height:1.6;
+      margin-bottom:12px;
+    }
+
+    @media (max-width:700px){
+      .grid-areas{
+        grid-template-columns:1fr;
+      }
+      .box{
+        padding:16px 12px;
+      }
+      #question-text{
+        font-size:1rem;
+      }
+      .btn{
+        font-size:.96rem;
+        padding:13px 12px;
+      }
+    }
+  </style>
+</head>
 <body>
 
 <header>
-<h1>ATUALIDADES TESTE GRÁTIS</h1>
-<p>TESTE: 2 MÓDULOS LIBERADOS • 10 QUESTÕES CADA • PREMIUM: 10 MÓDULOS E 200 QUESTÕES</p>
+  <h1>SOCIOLOGIA TESTE GRÁTIS</h1>
+  <p>TESTE: 2 MÓDULOS LIBERADOS • 10 QUESTÕES CADA • PREMIUM: 10 MÓDULOS E 200 QUESTÕES</p>
 </header>
 
 <div id="app"></div>
 
 <audio id="audio-bg" loop preload="auto" playsinline>
-<source src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3?filename=tension-103701.mp3" type="audio/mpeg">
+  <source src="https://cdn.pixabay.com/download/audio/2022/01/18/audio_d0a13f69d2.mp3?filename=tension-103701.mp3" type="audio/mpeg">
 </audio>
-<audio id="audio-correct" preload="auto" playsinline>
-<source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_0625c1539c.mp3?filename=success-1-6297.mp3" type="audio/mpeg">
+
+<audio id="audio-correct" preload="auto">
+  <source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_0625c1539c.mp3?filename=success-1-6297.mp3" type="audio/mpeg">
 </audio>
-<audio id="audio-wrong" preload="auto" playsinline>
-<source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_c6ccf3232f.mp3?filename=error-126627.mp3" type="audio/mpeg">
+
+<audio id="audio-wrong" preload="auto">
+  <source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_c6ccf3232f.mp3?filename=error-126627.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-const PREMIUM_URL="https://pay.kiwify.com.br/4yauUSB";
+const PREMIUM_URL = "https://pay.kiwify.com.br/cVUqErx";
 
-const app=document.getElementById("app");
-const audioBg=document.getElementById("audio-bg");
-const audioCorrect=document.getElementById("audio-correct");
-const audioWrong=document.getElementById("audio-wrong");
+const app = document.getElementById("app");
+const audioBg = document.getElementById("audio-bg");
+const audioCorrect = document.getElementById("audio-correct");
+const audioWrong = document.getElementById("audio-wrong");
 
-audioBg.volume=.025;
-audioCorrect.volume=.55;
-audioWrong.volume=.55;
+audioBg.volume = 0.06;
+audioCorrect.volume = 0.45;
+audioWrong.volume = 0.45;
 
-let audioLiberado=false;
-let areaAtual="";
-let questoesAtuais=[];
-let indiceQuestao=0;
-let acertosObjetivas=0;
-let questaoRenderizadaAtual=null;
-let travado=false;
+let audioLiberado = false;
+let areaAtual = "";
+let questoesAtuais = [];
+let indiceQuestao = 0;
+let acertosObjetivas = 0;
+let questaoRenderizadaAtual = null;
 
-document.addEventListener("click",destravarAudio,{once:true});
-document.addEventListener("touchstart",destravarAudio,{once:true});
+document.addEventListener("click", destravarAudio, { once: true });
+document.addEventListener("touchstart", destravarAudio, { once: true });
 
-function destravarAudio(){
- if(audioLiberado)return Promise.resolve(true);
- audioBg.muted=true;
- return audioBg.play().then(()=>{
-  audioBg.pause();audioBg.currentTime=0;audioBg.muted=false;audioLiberado=true;
-  audioCorrect.play().then(()=>{audioCorrect.pause();audioCorrect.currentTime=0}).catch(()=>{});
-  audioWrong.play().then(()=>{audioWrong.pause();audioWrong.currentTime=0}).catch(()=>{});
-  return true;
- }).catch(()=>false);
+function destravarAudio() {
+  if (audioLiberado) return Promise.resolve(true);
+
+  audioBg.muted = true;
+  return audioBg.play()
+    .then(() => {
+      audioBg.pause();
+      audioBg.currentTime = 0;
+      audioBg.muted = false;
+      audioLiberado = true;
+
+      audioCorrect.play().then(() => {
+        audioCorrect.pause();
+        audioCorrect.currentTime = 0;
+      }).catch(() => {});
+
+      audioWrong.play().then(() => {
+        audioWrong.pause();
+        audioWrong.currentTime = 0;
+      }).catch(() => {});
+
+      return true;
+    })
+    .catch(() => false);
 }
-function tocarAudioFundo(){if(!audioLiberado)return;audioBg.currentTime=0;audioBg.play().catch(()=>{})}
-function pararAudioFundo(){audioBg.pause();audioBg.currentTime=0}
-function tocarAcerto(){audioCorrect.currentTime=0;audioCorrect.play().catch(()=>{})}
-function tocarErro(){audioWrong.currentTime=0;audioWrong.play().catch(()=>{})}
 
-const areas=[
-{nome:"Brasil e Política",descricao:"Módulo liberado no teste grátis.",liberada:true},
-{nome:"Economia e Trabalho",descricao:"Módulo liberado no teste grátis.",liberada:true},
-{nome:"Meio Ambiente e Clima",descricao:"Disponível apenas na versão premium.",liberada:false},
-{nome:"Tecnologia e Sociedade",descricao:"Disponível apenas na versão premium.",liberada:false},
-{nome:"Saúde Pública",descricao:"Disponível apenas na versão premium.",liberada:false},
-{nome:"Educação e Juventude",descricao:"Disponível apenas na versão premium.",liberada:false},
-{nome:"Direitos Humanos e Cidadania",descricao:"Disponível apenas na versão premium.",liberada:false},
-{nome:"Geopolítica Mundial",descricao:"Disponível apenas na versão premium.",liberada:false},
-{nome:"Cultura, Mídia e Informação",descricao:"Disponível apenas na versão premium.",liberada:false},
-{nome:"Atualidades ENEM Integrado",descricao:"Disponível apenas na versão premium.",liberada:false}
+function tocarAudioFundo() {
+  if (!audioLiberado) return;
+  audioBg.currentTime = 0;
+  audioBg.play().catch(() => {});
+}
+
+function pararAudioFundo() {
+  audioBg.pause();
+  audioBg.currentTime = 0;
+}
+
+function tocarAcerto() {
+  audioCorrect.currentTime = 0;
+  audioCorrect.play().catch(() => {});
+}
+
+function tocarErro() {
+  audioWrong.currentTime = 0;
+  audioWrong.play().catch(() => {});
+}
+
+const areas = [
+  { nome: "Introdução à Sociologia", descricao: "Módulo liberado no teste grátis.", liberada: true },
+  { nome: "Clássicos da Sociologia", descricao: "Módulo liberado no teste grátis.", liberada: true },
+  { nome: "Cultura e Sociedade", descricao: "Disponível apenas na versão premium.", liberada: false },
+  { nome: "Trabalho e Sociedade", descricao: "Disponível apenas na versão premium.", liberada: false },
+  { nome: "Estado, Poder e Política", descricao: "Disponível apenas na versão premium.", liberada: false },
+  { nome: "Desigualdade Social", descricao: "Disponível apenas na versão premium.", liberada: false },
+  { nome: "Movimentos Sociais", descricao: "Disponível apenas na versão premium.", liberada: false },
+  { nome: "Globalização e Tecnologia", descricao: "Disponível apenas na versão premium.", liberada: false },
+  { nome: "Direitos Humanos e Cidadania", descricao: "Disponível apenas na versão premium.", liberada: false },
+  { nome: "Sociologia no ENEM", descricao: "Disponível apenas na versão premium.", liberada: false }
 ];
 
-function criarObjetiva(area,numero,base,q,o,c,coment){return{area,numero,base,q,o,c,coment}}
-function gerarAreaBase(nomeArea,lista){return lista.map((item,i)=>criarObjetiva(nomeArea,i+1,item.base,item.q,item.o,item.c,item.coment))}
-function embaralharAlternativas(questao){
- const pares=questao.o.map((texto,idx)=>({texto,correta:idx===questao.c}));
- for(let i=pares.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pares[i],pares[j]]=[pares[j],pares[i]]}
- return{...questao,opcoesRenderizadas:pares.map(p=>p.texto),corretaRenderizada:pares.findIndex(p=>p.correta)}
+function criarObjetiva(area, numero, textoBase, pergunta, alternativas, correta) {
+  return {
+    tipo: "objetiva",
+    area,
+    numero,
+    base: textoBase,
+    q: pergunta,
+    o: alternativas,
+    c: correta
+  };
 }
 
-const bancoQuestoes={
-"Brasil e Política":gerarAreaBase("Brasil e Política",[
-{base:"A democracia brasileira depende de instituições, participação cidadã e respeito às leis.",q:"Qual elemento é essencial para o funcionamento democrático?",o:["Participação cidadã","Censura permanente","Fim das eleições","Poder único"],c:0,coment:"Democracia exige participação, eleições, instituições e respeito às leis."},
-{base:"A Constituição Federal organiza direitos, deveres e funcionamento do Estado.",q:"A Constituição é importante porque:",o:["Define regras do país","Substitui eleições","Elimina direitos","Serve apenas como símbolo"],c:0,coment:"A Constituição é a principal lei do país."},
-{base:"O Brasil possui três Poderes independentes e harmônicos.",q:"Quais são os três Poderes?",o:["Executivo, Legislativo e Judiciário","Federal, Estadual e Municipal","Polícia, Exército e Marinha","Imprensa, Governo e Mercado"],c:0,coment:"A divisão de Poderes evita concentração de autoridade."},
-{base:"O Poder Legislativo cria leis e fiscaliza o Executivo.",q:"No Brasil, o Legislativo federal é formado por:",o:["Câmara dos Deputados e Senado","Prefeituras e escolas","Tribunais e ministérios","Governadores e secretários"],c:0,coment:"O Congresso Nacional é composto por Câmara dos Deputados e Senado."},
-{base:"Políticas públicas são ações do Estado para resolver problemas sociais.",q:"Qual é exemplo de política pública?",o:["Programa de vacinação","Venda informal sem regra","Opinião pessoal","Propaganda privada apenas"],c:0,coment:"Vacinação pública é ação estatal voltada à saúde coletiva."},
-{base:"A cidadania envolve direitos e deveres.",q:"Exercer cidadania significa:",o:["Participar da vida social e política","Ignorar problemas coletivos","Descumprir leis","Recusar direitos"],c:0,coment:"Cidadania envolve participação, direitos e responsabilidade social."},
-{base:"A transparência pública ajuda a combater abusos.",q:"A transparência é importante porque:",o:["Permite fiscalização social","Impede acesso a dados","Enfraquece controle social","Elimina participação"],c:0,coment:"Transparência permite que cidadãos acompanhem ações públicas."},
-{base:"A liberdade de imprensa é relevante em democracias.",q:"A imprensa livre contribui para:",o:["Fiscalizar o poder","Ocultar informações","Censurar cidadãos","Substituir eleições"],c:0,coment:"A imprensa ajuda a informar e fiscalizar autoridades."},
-{base:"A desinformação pode prejudicar decisões políticas.",q:"Fake news em eleições podem:",o:["Manipular opiniões","Melhorar o debate sempre","Garantir neutralidade","Eliminar polarização"],c:0,coment:"Desinformação compromete escolhas conscientes."},
-{base:"O pacto federativo divide responsabilidades entre União, Estados e Municípios.",q:"Essa divisão busca:",o:["Organizar competências administrativas","Concentrar tudo no governo federal","Eliminar municípios","Impedir políticas locais"],c:0,coment:"Cada ente federativo possui responsabilidades próprias."}
-]),
+function gerarAreaBase(nomeArea, perguntasObjetivas) {
+  return perguntasObjetivas.map((item, i) =>
+    criarObjetiva(nomeArea, i + 1, item.base, item.q, item.o, item.c)
+  );
+}
 
-"Economia e Trabalho":gerarAreaBase("Economia e Trabalho",[
-{base:"Inflação é o aumento generalizado dos preços.",q:"Quando a inflação cresce, o poder de compra tende a:",o:["Diminuir","Aumentar sempre","Ficar infinito","Não ser afetado nunca"],c:0,coment:"Com preços maiores, o dinheiro compra menos."},
-{base:"Juros influenciam crédito, consumo e investimentos.",q:"Taxas de juros mais altas tendem a:",o:["Encarecer empréstimos","Baratear todo crédito","Eliminar inflação imediatamente","Aumentar salário automaticamente"],c:0,coment:"Juros altos tornam o crédito mais caro."},
-{base:"Desemprego é falta de trabalho para quem procura ocupação.",q:"Uma consequência social do desemprego é:",o:["Redução de renda familiar","Aumento garantido de consumo","Fim da pobreza","Mais estabilidade imediata"],c:0,coment:"Sem emprego, a renda das famílias diminui."},
-{base:"Trabalho informal não possui todas as garantias trabalhistas.",q:"Um risco da informalidade é:",o:["Menor proteção social","Mais direitos garantidos sempre","Aposentadoria automática","Estabilidade plena"],c:0,coment:"Informalidade reduz acesso a direitos e proteção."},
-{base:"A tecnologia transforma o mercado de trabalho.",q:"Automação pode gerar:",o:["Mudança nas profissões","Fim de toda qualificação","Desaparecimento da economia","Proibição de inovação"],c:0,coment:"Automação muda tarefas e exige novas habilidades."},
-{base:"A qualificação profissional ajuda na empregabilidade.",q:"Qualificação significa:",o:["Desenvolver competências","Recusar estudo","Eliminar tecnologia","Evitar adaptação"],c:0,coment:"Qualificação prepara o trabalhador para novas demandas."},
-{base:"Desigualdade de renda afeta oportunidades sociais.",q:"Uma consequência da desigualdade é:",o:["Acesso desigual a serviços","Igualdade automática","Fim da pobreza","Melhor distribuição sempre"],c:0,coment:"Desigualdade limita acesso a educação, saúde e renda."},
-{base:"O consumo consciente considera impacto social e ambiental.",q:"Consumir conscientemente significa:",o:["Avaliar necessidade e impacto","Comprar sem critério","Desperdiçar recursos","Ignorar origem dos produtos"],c:0,coment:"Consumo consciente evita desperdício e considera consequências."},
-{base:"PIB mede a produção de bens e serviços.",q:"O PIB indica principalmente:",o:["Atividade econômica","Felicidade individual","Qualidade da internet","Número de eleitores"],c:0,coment:"PIB é indicador de produção econômica."},
-{base:"Educação financeira ajuda a lidar com orçamento.",q:"Ela é importante para:",o:["Planejar gastos e evitar dívidas","Aumentar consumo sem limite","Ignorar juros","Eliminar renda"],c:0,coment:"Planejamento financeiro reduz endividamento."}
-])
+function embaralharAlternativas(questao) {
+  const pares = questao.o.map((texto, idx) => ({ texto, correta: idx === questao.c }));
+  for (let i = pares.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pares[i], pares[j]] = [pares[j], pares[i]];
+  }
+  return {
+    ...questao,
+    opcoesRenderizadas: pares.map(p => p.texto),
+    corretaRenderizada: pares.findIndex(p => p.correta)
+  };
+}
+
+const bancoQuestoes = {
+  "Introdução à Sociologia": gerarAreaBase(
+    "Introdução à Sociologia",
+    [
+      {
+        base:`"A Sociologia surgiu como ciência no contexto das grandes transformações sociais provocadas pela Revolução Industrial e pela Revolução Francesa."`,
+        q:"O surgimento da Sociologia está relacionado principalmente à necessidade de:",
+        o:["Compreender as mudanças da sociedade moderna","Explicar fenômenos naturais sem sociedade","Substituir totalmente a Filosofia","Eliminar o estudo da política"],
+        c:0
+      },
+      {
+        base:`"A Sociologia procura analisar os fenômenos sociais de forma crítica e sistemática."`,
+        q:"O objeto de estudo da Sociologia é:",
+        o:["A sociedade e as relações sociais","Apenas os planetas","Somente os organismos vivos","Exclusivamente as reações químicas"],
+        c:0
+      },
+      {
+        base:`"O olhar sociológico permite estranhar aquilo que parece natural no cotidiano."`,
+        q:"Estranhamento sociológico significa:",
+        o:["Questionar práticas sociais vistas como naturais","Aceitar tudo sem reflexão","Ignorar problemas sociais","Afastar-se totalmente da realidade"],
+        c:0
+      },
+      {
+        base:`"A Sociologia analisa como os indivíduos são influenciados por instituições, normas, valores e estruturas sociais."`,
+        q:"Um exemplo de instituição social é:",
+        o:["Família","Montanha","Rio","Camada de ozônio"],
+        c:0
+      },
+      {
+        base:`"A sociedade é formada por relações entre indivíduos, grupos, regras e instituições."`,
+        q:"Na perspectiva sociológica, o indivíduo:",
+        o:["É influenciado pelo meio social","Vive totalmente isolado da sociedade","Não participa de relações sociais","É apenas um ser biológico"],
+        c:0
+      },
+      {
+        base:`"Augusto Comte é considerado um dos fundadores da Sociologia e defendia o positivismo."`,
+        q:"Para o positivismo de Comte, a sociedade deveria ser estudada com base em:",
+        o:["Método científico e observação","Mitos religiosos apenas","Opiniões sem evidência","Tradições sem análise"],
+        c:0
+      },
+      {
+        base:`"O senso comum é formado por opiniões e explicações cotidianas, nem sempre baseadas em investigação científica."`,
+        q:"A diferença entre Sociologia e senso comum é que a Sociologia busca:",
+        o:["Análise crítica, sistemática e fundamentada","Repetir preconceitos cotidianos","Evitar pesquisa","Confirmar qualquer opinião"],
+        c:0
+      },
+      {
+        base:`"A socialização é o processo pelo qual indivíduos aprendem normas, valores e comportamentos de uma sociedade."`,
+        q:"A socialização ocorre principalmente por meio de:",
+        o:["Família, escola, mídia e grupos sociais","Apenas genética","Somente fenômenos climáticos","Movimentos das placas tectônicas"],
+        c:0
+      },
+      {
+        base:`"Normas sociais orientam comportamentos esperados em determinada sociedade."`,
+        q:"Uma norma social é:",
+        o:["Regra de convivência compartilhada","Lei da gravidade","Reação química","Formação de nuvem"],
+        c:0
+      },
+      {
+        base:`"A Sociologia contribui para compreender desigualdades, conflitos, cultura, trabalho, política e cidadania."`,
+        q:"Uma função importante da Sociologia é:",
+        o:["Analisar criticamente a vida social","Impedir debates sociais","Negar desigualdades","Substituir todas as ciências"],
+        c:0
+      }
+    ]
+  ),
+
+  "Clássicos da Sociologia": gerarAreaBase(
+    "Clássicos da Sociologia",
+    [
+      {
+        base:`"Émile Durkheim defendia que a sociedade exerce influência sobre os indivíduos por meio de fatos sociais."`,
+        q:"Para Durkheim, fato social é:",
+        o:["Forma de agir, pensar e sentir exterior e coercitiva ao indivíduo","Escolha puramente individual sem influência social","Apenas fenômeno biológico","Reação química coletiva"],
+        c:0
+      },
+      {
+        base:`"Durkheim via a sociedade como uma realidade que ultrapassa os indivíduos."`,
+        q:"Uma característica dos fatos sociais é:",
+        o:["Coercitividade","Invisibilidade física total","Ausência de regras","Dependência exclusiva da vontade individual"],
+        c:0
+      },
+      {
+        base:`"A solidariedade social explica a coesão entre os membros de uma sociedade."`,
+        q:"Para Durkheim, sociedades tradicionais tendem a apresentar:",
+        o:["Solidariedade mecânica","Solidariedade orgânica apenas","Ausência de consciência coletiva","Individualismo industrial pleno"],
+        c:0
+      },
+      {
+        base:`"Max Weber analisou a ação social como comportamento dotado de sentido para o indivíduo."`,
+        q:"Para Weber, ação social é aquela que:",
+        o:["Tem sentido atribuído pelo agente e se orienta pelo outro","É apenas reflexo biológico","Não envolve significado","É sempre inconsciente e natural"],
+        c:0
+      },
+      {
+        base:`"Weber estudou formas de dominação legítima."`,
+        q:"A dominação baseada em leis e cargos burocráticos é chamada de:",
+        o:["Racional-legal","Carismática","Tradicional","Mística"],
+        c:0
+      },
+      {
+        base:`"Karl Marx analisou a sociedade capitalista a partir da luta de classes."`,
+        q:"Para Marx, a história das sociedades é marcada por:",
+        o:["Conflitos entre classes sociais","Harmonia eterna entre ricos e pobres","Ausência de exploração","Fim do trabalho"],
+        c:0
+      },
+      {
+        base:`"No capitalismo, Marx identificou a oposição entre burguesia e proletariado."`,
+        q:"A burguesia é a classe que:",
+        o:["Detém os meios de produção","Vende apenas sua força de trabalho","Não participa da economia","É formada exclusivamente por camponeses"],
+        c:0
+      },
+      {
+        base:`"O proletariado vende sua força de trabalho em troca de salário."`,
+        q:"Para Marx, o proletariado é:",
+        o:["Classe trabalhadora assalariada","Classe proprietária dos meios de produção","Grupo de nobres hereditários","Setor sem relação com trabalho"],
+        c:0
+      },
+      {
+        base:`"A mais-valia é central na crítica marxista ao capitalismo."`,
+        q:"Mais-valia refere-se:",
+        o:["Ao valor produzido pelo trabalhador e apropriado pelo capitalista","Ao salário integral pago ao trabalhador","À ausência de lucro","Ao imposto estatal obrigatório"],
+        c:0
+      },
+      {
+        base:`"A alienação no trabalho ocorre quando o trabalhador perde controle sobre o processo e o produto de seu trabalho."`,
+        q:"Alienação, em Marx, significa:",
+        o:["Separação do trabalhador em relação ao produto e sentido do trabalho","Liberdade total no trabalho","Propriedade coletiva automática","Ausência de exploração"],
+        c:0
+      }
+    ]
+  )
 };
 
-function irParaPremium(){
- if(!PREMIUM_URL || PREMIUM_URL.includes("COLE_AQUI")){
-  alert("Link premium ainda não configurado.");
-  return;
- }
- window.open(PREMIUM_URL,"_blank","noopener");
+function irParaPremium() {
+  if (!PREMIUM_URL || PREMIUM_URL.includes("COLE_AQUI")) {
+    alert("Link premium ainda não configurado.");
+    return;
+  }
+  window.open(PREMIUM_URL, "_blank", "noopener");
 }
 
-function mostrarMenu(){
- pararAudioFundo();
- app.innerHTML=`
- <div class="box">
- <h2 style="color:var(--blue);margin-bottom:8px;">Escolha um módulo de Atualidades</h2>
- <p class="mini">No teste grátis você libera <strong>2 módulos com 10 questões cada</strong>. Na versão premium você desbloqueia <strong>10 módulos e 200 questões</strong>.</p>
- <div class="grid-areas">
- ${areas.map(area=>`
- <div class="card-area ${area.liberada?"":"locked"}">
- <h3>${area.liberada?area.nome:"🔒 "+area.nome}</h3>
- <p>${area.descricao}</p>
- <button class="btn ${area.liberada?"":"btn-lock"}" onclick="${area.liberada?`iniciarArea('${area.nome.replace(/'/g,"\\'")}')`:`mostrarBloqueio()`}">
- ${area.liberada?"Entrar neste módulo":"Desbloquear no premium"}
- </button>
- </div>`).join("")}
- </div>
- </div>`;
+function mostrarMenu() {
+  pararAudioFundo();
+
+  app.innerHTML = `
+    <div class="box">
+      <h2 style="color:var(--blue); margin-bottom:8px;">Escolha um módulo de Sociologia</h2>
+      <p class="mini">No teste grátis você libera <strong>2 módulos com 10 questões cada</strong>. Na versão premium você desbloqueia <strong>10 módulos e 200 questões</strong>.</p>
+
+      <div class="grid-areas">
+        ${areas.map(area => `
+          <div class="card-area ${area.liberada ? "" : "locked"}">
+            <h3>${area.liberada ? area.nome : "🔒 " + area.nome}</h3>
+            <p>${area.descricao}</p>
+            <button class="btn ${area.liberada ? "" : "btn-lock"}" onclick="${area.liberada ? `iniciarArea('${area.nome.replace(/'/g, "\\'")}')` : `mostrarBloqueio()`}">
+              ${area.liberada ? "Entrar neste módulo" : "Desbloquear no premium"}
+            </button>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+  `;
 }
 
-function mostrarBloqueio(){
- pararAudioFundo();
- app.innerHTML=`
- <div class="lock-box">
- <h2>🔒 MÓDULO PREMIUM</h2>
- <p>Esse módulo está disponível apenas na versão completa do Simulado Atualidades.</p>
- <p>No premium você desbloqueia <strong>10 módulos</strong> e <strong>200 questões completas</strong>.</p>
- <button class="btn btn-premium" onclick="irParaPremium()">LIBERAR ACESSO COMPLETO</button>
- <button class="btn btn-voltar" onclick="mostrarMenu()">VOLTAR AO MENU</button>
- </div>`;
+function mostrarBloqueio() {
+  pararAudioFundo();
+
+  app.innerHTML = `
+    <div class="lock-box">
+      <h2>🔒 MÓDULO PREMIUM</h2>
+      <p>Esse módulo está disponível apenas na versão completa do simulado de Sociologia.</p>
+      <p>No premium você desbloqueia <strong>10 módulos</strong> e <strong>200 questões completas</strong>.</p>
+      <button class="btn btn-premium" onclick="irParaPremium()">LIBERAR ACESSO COMPLETO</button>
+      <button class="btn btn-voltar" onclick="mostrarMenu()">VOLTAR AO MENU</button>
+    </div>
+  `;
 }
 
-async function iniciarArea(nomeArea){
- await destravarAudio();
- areaAtual=nomeArea;
- questoesAtuais=bancoQuestoes[nomeArea]||[];
- indiceQuestao=0;
- acertosObjetivas=0;
- questaoRenderizadaAtual=null;
- travado=false;
+async function iniciarArea(nomeArea) {
+  await destravarAudio();
+  areaAtual = nomeArea;
+  questoesAtuais = bancoQuestoes[nomeArea] || [];
+  indiceQuestao = 0;
+  acertosObjetivas = 0;
+  questaoRenderizadaAtual = null;
 
- if(!questoesAtuais.length){
-  app.innerHTML=`<div class="box"><h2 style="color:var(--red);">Erro ao abrir o módulo</h2><button class="btn btn-voltar" onclick="mostrarMenu()">Voltar ao menu</button></div>`;
-  return;
- }
+  if (!questoesAtuais.length) {
+    app.innerHTML = `
+      <div class="box">
+        <h2 style="color:var(--red);">Erro ao abrir o módulo</h2>
+        <button class="btn btn-voltar" onclick="mostrarMenu()">Voltar ao menu</button>
+      </div>
+    `;
+    return;
+  }
 
- setTimeout(()=>{tocarAudioFundo()},120);
- carregarQuestao();
+  setTimeout(() => {
+    tocarAudioFundo();
+  }, 120);
+
+  carregarQuestao();
 }
 
-function montarEnunciado(questao){
- return`
- <span class="question-label">Base para resolução:</span>
- <span class="text-base">${questao.base}</span>
- <span class="question-label">Pergunta:</span>
- ${questao.q}`;
+function montarEnunciado(questao) {
+  return `
+    <span class="question-label">Base para interpretação:</span>
+    <span class="text-base">${questao.base}</span>
+    <span class="question-label">Pergunta:</span>
+    ${questao.q}
+  `;
 }
 
-function carregarQuestao(){
- travado=false;
- const questao=questoesAtuais[indiceQuestao];
- const total=questoesAtuais.length;
- questaoRenderizadaAtual=embaralharAlternativas(questao);
+function carregarQuestao() {
+  const questao = questoesAtuais[indiceQuestao];
+  const total = questoesAtuais.length;
+  questaoRenderizadaAtual = embaralharAlternativas(questao);
 
- let html=`
- <div class="box">
- <div class="status">
- <span>${areaAtual}</span>
- <span>Questão ${indiceQuestao+1}/${total}</span>
- </div>
- <div id="question-text">${montarEnunciado(questaoRenderizadaAtual)}</div>
- <div class="options-wrap">`;
+  let html = `
+    <div class="box">
+      <div class="status">
+        <span>${areaAtual}</span>
+        <span>Questão ${indiceQuestao + 1}/${total}</span>
+      </div>
+      <div id="question-text">${montarEnunciado(questaoRenderizadaAtual)}</div>
+      <div class="options-wrap">
+  `;
 
- questaoRenderizadaAtual.opcoesRenderizadas.forEach((alt,idx)=>{
-  html+=`<button class="btn option-btn" onclick="responderObjetiva(${idx})">${alt}</button>`;
- });
+  questaoRenderizadaAtual.opcoesRenderizadas.forEach((alt, idx) => {
+    html += `<button class="btn option-btn" onclick="responderObjetiva(${idx})">${alt}</button>`;
+  });
 
- html+=`
- </div>
- <div id="comentario" class="comment-box"></div>
- <button id="btn-proxima" class="btn btn-next" style="display:none" onclick="proximaQuestao()">Próxima pergunta</button>
- <button class="btn btn-voltar" onclick="mostrarMenu()">Voltar ao menu</button>
- </div>`;
+  html += `
+      </div>
+      <button class="btn btn-voltar" onclick="mostrarMenu()">Voltar ao menu</button>
+    </div>
+  `;
 
- app.innerHTML=html;
+  app.innerHTML = html;
 }
 
-function responderObjetiva(escolhida){
- if(travado)return;
- travado=true;
+function responderObjetiva(escolhida) {
+  const botoes = document.querySelectorAll(".option-btn");
+  const correta = questaoRenderizadaAtual.corretaRenderizada;
 
- const botoes=document.querySelectorAll(".option-btn");
- const correta=questaoRenderizadaAtual.corretaRenderizada;
- const comentario=document.getElementById("comentario");
- const btnProxima=document.getElementById("btn-proxima");
+  botoes.forEach((btn, idx) => {
+    btn.disabled = true;
+    if (idx === correta) btn.classList.add("correct");
+  });
 
- botoes.forEach((btn,idx)=>{
-  btn.disabled=true;
-  if(idx===correta)btn.classList.add("correct");
- });
+  if (escolhida === correta) {
+    acertosObjetivas++;
+    tocarAcerto();
+  } else {
+    botoes[escolhida].classList.add("wrong");
+    tocarErro();
+  }
 
- if(escolhida===correta){
-  acertosObjetivas++;
-  tocarAcerto();
-  comentario.innerHTML=`<strong style="color:var(--green);">Resposta correta.</strong><br>${questaoRenderizadaAtual.coment}`;
- }else{
-  if(botoes[escolhida])botoes[escolhida].classList.add("wrong");
-  tocarErro();
-  comentario.innerHTML=`<strong style="color:var(--red);">Resposta incorreta.</strong><br>${questaoRenderizadaAtual.coment}`;
- }
-
- comentario.style.display="block";
- btnProxima.style.display="block";
+  setTimeout(() => {
+    indiceQuestao++;
+    if (indiceQuestao < questoesAtuais.length) {
+      carregarQuestao();
+    } else {
+      finalizarArea();
+    }
+  }, 900);
 }
 
-function proximaQuestao(){
- indiceQuestao++;
- if(indiceQuestao<questoesAtuais.length)carregarQuestao();
- else finalizarArea();
-}
+function finalizarArea() {
+  pararAudioFundo();
 
-function finalizarArea(){
- pararAudioFundo();
+  const notaFinal = acertosObjetivas * 10;
+  const totalPossivel = 200;
 
- const notaFinal=acertosObjetivas*20;
- const totalPossivel=200;
- let feedback="Você concluiu uma amostra do treinamento de Atualidades. A versão premium possui <strong>10 módulos</strong> e <strong>200 questões</strong>.";
+  let feedback = "Você concluiu uma amostra do Simulado Sociologia ENEM. A versão premium possui 10 módulos e 200 questões.";
 
- if(notaFinal>=160)feedback+=" Excelente começo. Você já pode avançar para o premium.";
- else if(notaFinal>=100)feedback+=" Bom começo. No premium você reforça os pontos fracos.";
- else feedback+=" Esse teste mostrou onde melhorar. O premium ajuda a evoluir com treino completo.";
+  if (notaFinal >= 80) {
+    feedback += " Ótimo resultado no teste grátis. Você já pode avançar para o premium.";
+  } else if (notaFinal >= 50) {
+    feedback += " Bom começo. No premium você treina o restante dos módulos.";
+  } else {
+    feedback += " Esse teste já mostrou onde melhorar. O premium ajuda a evoluir com treino completo.";
+  }
 
- app.innerHTML=`
- <div class="box">
- <h2 style="color:var(--blue);">${areaAtual}</h2>
- <div class="result-number">${notaFinal}/${totalPossivel}</div>
- <div class="result-sub">Acertos: ${acertosObjetivas}/10</div>
- <p class="mini" style="margin-bottom:18px;">${feedback}</p>
+  app.innerHTML = `
+    <div class="box">
+      <h2 style="color:var(--blue);">${areaAtual}</h2>
+      <div class="result-number">${notaFinal}/${totalPossivel}</div>
+      <div class="result-sub">Acertos: ${acertosObjetivas}/10</div>
+      <p class="mini" style="margin-bottom:18px;">${feedback}</p>
 
- <button class="btn btn-premium" onclick="irParaPremium()">DESBLOQUEAR VERSÃO COMPLETA</button>
- <button class="btn" onclick="iniciarArea('${areaAtual.replace(/'/g,"\\'")}')">Refazer este módulo</button>
- <button class="btn btn-voltar" onclick="mostrarMenu()">Voltar ao menu</button>
- </div>`;
+      <button class="btn btn-premium" onclick="irParaPremium()">DESBLOQUEAR VERSÃO COMPLETA</button>
+      <button class="btn" onclick="iniciarArea('${areaAtual.replace(/'/g, "\\'")}')">Refazer este módulo</button>
+      <button class="btn btn-voltar" onclick="mostrarMenu()">Voltar ao menu</button>
+    </div>
+  `;
 }
 
 mostrarMenu();
 </script>
+
 </body>
 </html>
