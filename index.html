@@ -50,7 +50,7 @@ header p{margin-top:10px;color:var(--pink);font-weight:800;font-size:clamp(.95re
 
 <header>
 <h1>ATUALIDADES TESTE GRÁTIS</h1>
-<p>2 MÓDULOS LIBERADOS • 10 QUESTÕES CADA • RESTANTE BLOQUEADO</p>
+<p>TESTE: 2 MÓDULOS LIBERADOS • 10 QUESTÕES CADA • PREMIUM: 10 MÓDULOS E 200 QUESTÕES</p>
 </header>
 
 <div id="app"></div>
@@ -66,7 +66,7 @@ header p{margin-top:10px;color:var(--pink);font-weight:800;font-size:clamp(.95re
 </audio>
 
 <script>
-const PREMIUM_URL="COLE_AQUI_O_LINK_PREMIUM_ATUALIDADES";
+const PREMIUM_URL="https://pay.kiwify.com.br/4yauUSB";
 
 const app=document.getElementById("app");
 const audioBg=document.getElementById("audio-bg");
@@ -152,14 +152,20 @@ const bancoQuestoes={
 ])
 };
 
-function irParaPremium(){window.location.href=PREMIUM_URL}
+function irParaPremium(){
+ if(!PREMIUM_URL || PREMIUM_URL.includes("COLE_AQUI")){
+  alert("Link premium ainda não configurado.");
+  return;
+ }
+ window.open(PREMIUM_URL,"_blank","noopener");
+}
 
 function mostrarMenu(){
  pararAudioFundo();
  app.innerHTML=`
  <div class="box">
  <h2 style="color:var(--blue);margin-bottom:8px;">Escolha um módulo de Atualidades</h2>
- <p class="mini">No teste grátis você libera <strong>2 módulos</strong>. Os demais ficam bloqueados para a versão completa.</p>
+ <p class="mini">No teste grátis você libera <strong>2 módulos com 10 questões cada</strong>. Na versão premium você desbloqueia <strong>10 módulos e 200 questões</strong>.</p>
  <div class="grid-areas">
  ${areas.map(area=>`
  <div class="card-area ${area.liberada?"":"locked"}">
@@ -179,7 +185,7 @@ function mostrarBloqueio(){
  <div class="lock-box">
  <h2>🔒 MÓDULO PREMIUM</h2>
  <p>Esse módulo está disponível apenas na versão completa do Simulado Atualidades.</p>
- <p>No premium você desbloqueia os 10 módulos e 200 questões completas.</p>
+ <p>No premium você desbloqueia <strong>10 módulos</strong> e <strong>200 questões completas</strong>.</p>
  <button class="btn btn-premium" onclick="irParaPremium()">LIBERAR ACESSO COMPLETO</button>
  <button class="btn btn-voltar" onclick="mostrarMenu()">VOLTAR AO MENU</button>
  </div>`;
@@ -279,7 +285,7 @@ function finalizarArea(){
 
  const notaFinal=acertosObjetivas*20;
  const totalPossivel=200;
- let feedback="Você concluiu uma amostra do treinamento de Atualidades. A versão completa possui 10 módulos e 200 questões.";
+ let feedback="Você concluiu uma amostra do treinamento de Atualidades. A versão premium possui <strong>10 módulos</strong> e <strong>200 questões</strong>.";
 
  if(notaFinal>=160)feedback+=" Excelente começo. Você já pode avançar para o premium.";
  else if(notaFinal>=100)feedback+=" Bom começo. No premium você reforça os pontos fracos.";
